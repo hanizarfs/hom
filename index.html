@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper index">
+        <div class="container-fluid text-light">
+            <div class="row h-100 align-items-center">
+                <div class="col-6 mb-2 slide-right">
+                    <h1>HOMIY</h1>
+                    <h5>Welcome to Adventure Chemistry Games</h5>
+                    <a href="pages/surat.html" class="btn primary-btn text-light fw-700 px-4 mt-4">START</a>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="assets/img/profesor.png" class="slide-left w-50 px-4 mt-5 pt-5" alt="Profesor">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        setTimeout(function () {
+            document.querySelector('.slide-left').classList.add('active');
+            document.querySelector('.slide-right').classList.add('active');
+        }, 0);
+    </script>
+</body>
+
+</html>

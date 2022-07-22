@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <style>
+        @media only screen and (orientation:landscape) {
+            body {
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                width: 90%;
+                height: 100%;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: -1;
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media only screen and (orientation:portrait) {
+            body {
+                height: 100vw;
+                transform: rotate(90deg);
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                height: 100%;
+                width: 152%;
+                margin: 0 10% 0;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: -1;
+                width: 180%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../assets/img/lemari-laboratorium.png" class="bg" alt="Background">
+    <div class="container-fluid d-flex justify-content-around align-items-center text-light py-5">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#salah"><img src="../assets/img/senyawa1.png"
+                class="pb-5" alt=""></a>
+        <a href="" data-bs-toggle="modal" data-bs-target="#benar"><img src="../assets/img/senyawa2.png" class="pb-5" alt=""></a>
+        <span class="me-5"></span>
+        <a href="" data-bs-toggle="modal" data-bs-target="#salah"><img src="../assets/img/senyawa3.png" class="pb-5 ms-5 ps-4" alt=""></a>
+        <a href="" data-bs-toggle="modal" data-bs-target="#salah"><img src="../assets/img/senyawa4.png" class="pb-5" id="d" alt=""></a>
+        <a href="" data-bs-toggle="modal" data-bs-target="#salah"><img src="../assets/img/senyawa5.png" class="pb-5" id="e" alt=""></a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade mt-5" id="salah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Maaf jawaban anda salah
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade mt-5" id="benar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Selamat jawaban anda benar
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="kerjakan.html" class="btn btn-primary">Selanjutnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

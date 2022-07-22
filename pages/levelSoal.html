@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <style>
+        @media only screen and (orientation:landscape) {
+            body {
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                width: 90%;
+                height: 100%;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: -1;
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media only screen and (orientation:portrait) {
+            body {
+                height: 100vw;
+                transform: rotate(90deg);
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                height: 100%;
+                width: 152%;
+                margin: 0 10% 0;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: -1;
+                width: 180%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .profesor {
+            position: absolute;
+            animation: 1.2s ease-out 0s 1 slideInFromRight;
+            bottom: -5%;
+            left: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        .card-tantangan:hover {
+            transform: scale(1.1);
+            transition: .5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../assets/img/bg-soal.png" class="bg" alt="Background">
+    <div class="container-fluid text-light text-center">
+        <h1 class="pt-5 mb-5">PILIH TANTANGAN!</h1>
+        <div class="row pb-5">
+            <div class="col-9 ps-5">
+                <div class="d-flex h-100 w align-items-center position-relative">
+                    <div class="row w-100">
+                        <div class="col-4">
+                            <a href="alkana1.html" class="card-tantangan d-flex flex-column">
+                                <h5>ALKANA</h5>
+                                <img src="../assets/img/alkana-card.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="d-flex flex-column">
+                                <h5>ALKENA</h5>
+                                <img src="../assets/img/lock-card.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="" class="d-flex flex-column">
+                                <h5>ALKUNA</h5>
+                                <img src="../assets/img/lock-card.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 position-relative">
+                <img src="../assets/img/profesor.png" class="profesor p-2 w-75" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

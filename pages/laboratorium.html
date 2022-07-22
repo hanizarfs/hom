@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        @media only screen and (orientation:landscape) {
+            body {
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                width: 90%;
+                height: 100%;
+            }
+
+            .bg-home {
+                position: absolute;
+                z-index: -1;
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media only screen and (orientation:portrait) {
+            body {
+                height: 100vw;
+                transform: rotate(90deg);
+                overflow: hidden;
+            }
+
+            .container-fluid {
+                height: 100%;
+                width: 152%;
+                margin: 0 10% 0;
+            }
+
+            .bg-home {
+                position: absolute;
+                z-index: -1;
+                width: 180%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .profesor-crop {
+            animation: 1.2s ease-out 0s 1 slideInFromLeft;
+            width: 30%;
+            z-index: 0;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .kuali-crop {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 34%;
+        }
+    </style>
+</head>
+
+<body onclick="clicked()">
+    <img src="../assets/img/bg-laboratorium.png" class="bg-home" alt="Background">
+    <div class="container-fluid">
+        <img src="../assets/img/profesor-crop.png" class="profesor-crop " alt="">
+        <img src="../assets/img/kuali-crop.png" class="kuali-crop" alt="">
+    </div>
+    <div class="position-absolute top-0 mt-3 w-100">
+        <img src="../assets/img/msg4.png" class="w-75 px-5 float-end msg1" alt="">
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function clicked() {
+            window.location.href = "tebak-senyawa.html";
+        }
+        setTimeout(function () {
+            document.querySelector('.msg1').classList.add('active');
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="30;url=laboratorium.html" />
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body onclick="clicked()">
+  <div class="wrapper pembukaan">
+    <div class="container-fluid">
+      <div class="row h-100 align-items-end ps-5 pe-3 position-relative">
+        <div class="chat position-absolute top-0 mt-3 d-flex flex-column">
+          <img src="../assets/img/pesan-prof1.png" class="chat-msg msg1 align-self-end w-50" alt="">
+          <img src="../assets/img/pesan-pem1.png" class="chat-msg msg2 float-start w-50" alt="">
+          <img src="../assets/img/pesan-prof2.png" class="chat-msg msg3 w-50 align-self-end" alt="">
+        </div>
+        <div class="col-6">
+          <img src="../assets/img/pemagang.png" class="h-60 mb-2 slide-right" alt="pemagang">
+        </div>
+        <div class="col-6 text-end">
+          <img src="../assets/img/profesor.png" class="h-55 mb-2 slide-left" alt="Profesor">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function clicked() {
+      window.location.href = "laboratorium.html";
+    }
+    setTimeout(function () {
+      document.querySelector('.slide-right').classList.add('active');
+    }, 0);
+    setTimeout(function () {
+      document.querySelector('.slide-left').classList.add('active');
+    }, 500);
+    setTimeout(function () {
+      document.querySelector('.msg1').classList.add('active');
+    }, 2000);
+    setTimeout(function () {
+      document.querySelector('.msg2').classList.add('active');
+    }, 5000);
+    setTimeout(function () {
+      document.querySelector('.msg3').classList.add('active');
+    }, 8000);
+  </script>
+</body>
+
+</html>
